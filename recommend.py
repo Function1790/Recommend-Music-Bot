@@ -56,7 +56,9 @@ def sortScores(scores:list):
 # bot function
 async def sendQuestionByCtx(ctx, questionIndex):
     qeustion = getQuestionByIndex(questionIndex)
-    await ctx.send(qeustion+" [0 또는 1을 선택하세요]")
+    await ctx.send(
+        f"({questionIndex+1}/{questionCount}) 0 또는 1을 선택하세요!\n"+
+        qeustion)
 
 async def sendOnMessage(bot, recv, content:str):
     await recv.channel.send(content)
