@@ -1,7 +1,10 @@
 import discord
 from discord.ext import commands
-import env
-import recommend
+
+import env, recommend, music_loader
+
+playlist = music_loader.loadMusicFile()
+playlist = music_loader.parseMusicData(playlist)
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -15,7 +18,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('Pong! ')
+    await ctx.send('Pong!')
     
 @bot.command()
 async def test(ctx):
@@ -51,7 +54,14 @@ async def on_message(recv):
             await recommend.sendQuestionByMsg(bot, recv, index)
             userQuestionIndexes[uid] += 1
         else:
-            print(recommend.scores)
-            await recommend.sendOnMessage(bot, recv, recommend.scores)
+            soredScores = recommend.sortScores(recommend.scores)
+            content = "당신에게 추천할 음악!\n"
+            for i in range(env.MAX_RECOMMENDATION):
+                content = f"{i+1} 순위\n"
+                index = soredScores[i][0]
+                content += f'{playlist[index][0]}\n'
+                for j in playlist[index][1:]:
+                    content += f'- {j}\n'
+            await recommend.sendOnMessage(bot, recv, content)
     await bot.process_commands(recv)
 bot.run(env.TOKEN)

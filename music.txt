@@ -1,0 +1,54 @@
+#클래식(Classical): 서양 전통 음악으로, 오케스트라나 실내악 등 다양한 형식이 있음.
+엘리제를 위하여
+베토벤 교향곡 제 5번 C단조 작품.67
+비발디의 사계: 봄
+#재즈(Jazz): 즉흥 연주와 독특한 리듬, 스윙감이 특징인 장르.
+Frank Sinatra - Fly to the moon
+Nat King Cole - L-O-V-E
+Louis Armstrong - La Vie En Rose
+#팝(Pop): 대중적인 멜로디와 구조를 가진 음악.
+Lady Gaga & Bruno Mars – Die With A Smile
+Ed Sheeran - Shape of you
+Sabrina Carpenter - Espresso
+#록(Rock): 강렬한 리듬과 일렉트릭 기타 사운드가 중심이 되는 장르.
+Steel Roots - Broken Chains
+AC/DC - Highway to Hell
+Nova Rising - Eclipse of Eternity
+#힙합(Hip-hop): 랩과 비트박스, DJ 문화에서 발전한 음악.
+창모 - Meteor
+빈지노 - Break
+Not Like Us – Kendrick Lamar
+#R&B/소울(Soul): 리듬과 블루스, 감성적인 보컬이 특징.
+Ravyn Lenae – Love Me Not
+태버 (TABBER) (Feat. DEAN) – Chi-Ka
+Leon Thomas – Mutt
+#컨트리(Country): 미국 남부의 전통 음악에서 발전한 장르.
+Johnny Cash - Ring of Fire
+Dolly Parton - Jolene
+Luke Combs - Beautiful Crazy
+#레게(Reggae): 자메이카에서 유래한 독특한 리듬의 음악.
+Bob Marley - One Love
+Toots and the Maytals - Pressure Drop
+Jimmy Cliff - You Can Get It If You Really Want
+#디스코(Disco): 1970년대 유행한 댄스 중심 음악.
+Daft Punk - Get Lucky
+Earth, Wind & Fire - September
+Bee Gees - Stayin’ Alive
+#일렉트로닉(전자음악, Electronic): 신디사이저, 컴퓨터 등 전자 악기로 만드는 음악.
+Alan Walker - Faded
+Zedd - Clarity
+Skrillex – Bangarang
+#트로트(Trot): 한국 고유의 대중가요 장르.
+홍진영 - 사랑의배터리
+영탁 - 니가 왜 거기서나와
+김연자 - 아모르파티
+#발라드(Ballad): 감성적이고 서정적인 멜로디의 노래.
+조규현 - 광화문에서
+박완규 - 천년의 사랑
+너드커넥션 - 그대만 있다면
+#메탈(Metal): 하드록에서 발전, 강렬한 사운드와 빠른 템포가 특징.
+Beast in Black - Blind And Frozen
+#랩(Rap): 리듬에 맞춰 빠르게 가사를 읊는 형식.
+아웃사이더 - 외톨이
+시차(We are)
+산이 - Big Boy

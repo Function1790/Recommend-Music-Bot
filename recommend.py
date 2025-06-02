@@ -22,10 +22,10 @@ questionsKeys = list(questions.keys())
 questionCount = len(questionsKeys)
 
 # function
-def getQuestionByIndex(questionIndex):
+def getQuestionByIndex(questionIndex:int):
     return questionsKeys[questionIndex]
 
-def addScoreByQuestionIndex(select, questionIndex):
+def addScoreByQuestionIndex(select:str, questionIndex:int):
     global scores
     question = questionsKeys[questionIndex]
     selectedScoreArray = questions[question]
@@ -33,16 +33,34 @@ def addScoreByQuestionIndex(select, questionIndex):
         selectedScoreArray = rev(selectedScoreArray)
     scores += selectedScoreArray
 
+def sortDictByValue(data:dict):
+    items = list(data.items())
+    n = len(items)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if items[j][1] > items[j + 1][1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+
+    return items
+
+def sortScores(scores:list):
+    '''
+    return items[rank][]
+    [rank][0] => janre index
+    [rank][1] => score
+    '''
+    dictScores = {i:scores[i] for i in range(len(scores))}
+    return sortDictByValue(dictScores)
+
 # bot function
 async def sendQuestionByCtx(ctx, questionIndex):
     qeustion = getQuestionByIndex(questionIndex)
     await ctx.send(qeustion+" [0 또는 1을 선택하세요]")
-    return    
 
-async def sendOnMessage(bot, recv, content):
+async def sendOnMessage(bot, recv, content:str):
     await recv.channel.send(content)
 
-async def sendQuestionByMsg(bot, msg, questionIndex):
+async def sendQuestionByMsg(bot, msg, questionIndex:int):
     qeustion = getQuestionByIndex(questionIndex)
     await sendOnMessage(bot, msg, qeustion+" [0 또는 1을 선택하세요]")
-    return
