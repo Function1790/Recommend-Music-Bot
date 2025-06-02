@@ -18,19 +18,12 @@ questions = {
     "신나는 음악 vs 감성적인 음악" : [0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0],
     "밴드 음악 vs 솔로 가수 음악" : [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
 }
-questionsKeys = list(questions.keys())
 
-def getQuestionByIndex(questionIndex):
-    return questionsKeys[questionIndex]
-    
-def addScoreByQuestion(question):
-    select = input(question)
-    selectedScoreArray = questions[question]
+for i in questions:
+    select = input(i)
+    selectedScoreArray = questions[i]
     if select != '0':
         selectedScoreArray = rev(selectedScoreArray)
     scores += selectedScoreArray
     
-async def sendQuestion(ctx, questionIndex):
-    qeustion = getQuestionByIndex(questionIndex)
-    await ctx.send(qeustion)
-    return
+print(scores)
