@@ -19,18 +19,30 @@ questions = {
     "밴드 음악 vs 솔로 가수 음악" : [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
 }
 questionsKeys = list(questions.keys())
+questionCount = len(questionsKeys)
 
+# function
 def getQuestionByIndex(questionIndex):
     return questionsKeys[questionIndex]
-    
-def addScoreByQuestion(question):
-    select = input(question)
+
+def addScoreByQuestionIndex(select, questionIndex):
+    global scores
+    question = questionsKeys[questionIndex]
     selectedScoreArray = questions[question]
     if select != '0':
         selectedScoreArray = rev(selectedScoreArray)
     scores += selectedScoreArray
-    
-async def sendQuestion(ctx, questionIndex):
+
+# bot function
+async def sendQuestionByCtx(ctx, questionIndex):
     qeustion = getQuestionByIndex(questionIndex)
-    await ctx.send(qeustion)
+    await ctx.send(qeustion+" [0 또는 1을 선택하세요]")
+    return    
+
+async def sendOnMessage(bot, recv, content):
+    await recv.channel.send(content)
+
+async def sendQuestionByMsg(bot, msg, questionIndex):
+    qeustion = getQuestionByIndex(questionIndex)
+    await sendOnMessage(bot, msg, qeustion+" [0 또는 1을 선택하세요]")
     return
